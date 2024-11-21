@@ -1,0 +1,115 @@
+.hero_section {
+  position: relative;
+
+  overflow: clip;
+}
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 98.9%;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+.hero_video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.hero_content {
+  position: absolute;
+  bottom: 25%;
+  width: 50%;
+  margin: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.hero_content h1 {
+  margin-left: 0.8rem;
+  font-size: 5rem;
+  overflow: hidden;
+  background: -webkit-linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(255, 114, 0, 1) 70%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.hero_content p {
+  margin-left: 0.8rem;
+
+  font-size: 1.1rem;
+  /* font-weight: 500; */
+  color: white;
+}
+.hero_button {
+  margin: 2rem;
+}
+.hero_button button {
+  width: 200px;
+  padding: 15px 0;
+  text-align: center;
+  border-radius: 25px;
+  font-weight: bold;
+  border: 2px solid orangered;
+  background: transparent;
+  color: white;
+  font-size: 1.1rem;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero_button button:hover {
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(255, 100, 0, 1) 100%
+  );
+  border: none;
+}
+
+@media screen and (max-width: 1024px) {
+  /* For screens smaller than 1024px */
+  .hero_content {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+
+    bottom: 15%;
+  }
+  .hero_content h1 {
+    font-size: 3rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .hero_content {
+    width: 100%;
+    margin-left: 0;
+    padding: 0;
+  }
+  .hero_content h1 {
+    font-size: 2rem;
+  }
+  .hero_content p {
+    font-size: 0.8rem;
+  }
+  .hero_button button {
+    padding: 0.5rem;
+    font-size: 0.5rem;
+  }
+}
+@media screen and (max-width: 426px) {
+  .hero_content h1 {
+    font-size: 1rem;
+  }
+  .hero_content p {
+    font-size: 0.5rem;
+  }
+  .hero_button button {
+    display: none;
+  }
+}

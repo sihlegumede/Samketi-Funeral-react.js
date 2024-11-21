@@ -1,0 +1,133 @@
+.more_section {
+  display: flex;
+  padding: 5rem;
+  overflow: clip;
+  margin: auto;
+}
+.more_section > * {
+  flex: 1;
+}
+.more_content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 50%;
+}
+.more_content h1 {
+  font-size: 5rem;
+  text-align: center;
+}
+.more_content p {
+  font-size: 1.2rem;
+  margin: 1rem;
+  color: gray;
+}
+.more_content_ticker {
+  display: flex;
+  width: calc(100px * 18);
+  position: relative;
+  animation: scroll 15s infinite linear;
+  padding: 3rem;
+}
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-50px * 18));
+  }
+}
+.ticker {
+  height: 100px;
+  width: 150px;
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  perspective: 100px;
+}
+.ticker img {
+  width: 100%;
+  transform: transform 1%;
+}
+.ticker img:hover {
+  transform: translateZ(20px);
+}
+.ticker::before,
+.ticker::after {
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 20%;
+  z-index: 2;
+}
+
+.ticker::before {
+  left: 0;
+  top: 0;
+}
+
+.ticker::after {
+  right: 0;
+  top: 0;
+  transform: rotateZ(180deg);
+}
+
+.swiper_content {
+  position: relative;
+}
+.swiper {
+  width: 400px;
+  height: 400px;
+}
+
+.swiper-slide {
+  background-position: center;
+  background-size: cover;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+}
+
+@media screen and (max-width: 1024px) {
+  .more_section h1 {
+    font-size: 4rem;
+    text-align: center;
+  }
+  .more_section {
+    flex-direction: column;
+    gap: 1rem;
+
+    margin: 1rem 3rem;
+  }
+
+  .more_section p {
+    font-size: 0.8rem;
+    margin: 0;
+  }
+  .more_content {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .more_section {
+    width: 100%;
+    margin: 0;
+  }
+  .mySwiper {
+    width: 200px;
+    height: 200px;
+  }
+}
+@media screen and (max-width: 426px) {
+  .more_section h1 {
+    font-size: 3rem;
+  }
+}
